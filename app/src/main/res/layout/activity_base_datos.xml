@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BaseDatosActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.02">
+
+        <TextView
+            android:id="@+id/tvTitleBD"
+            android:gravity="center"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:text="@string/titleBD"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="600dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.025">
+
+        <LinearLayout
+            android:id="@+id/liLaInput1"
+            android:layout_width="350dp"
+            android:layout_height="75dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvCodigo"
+                android:layout_width="40dp"
+                android:layout_height="75dp"
+                android:text="@string/textCode" />
+
+            <EditText
+                android:id="@+id/etCodigo"
+                android:inputType="number"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:hint="@string/tipCode" />
+
+            <TextView
+                android:id="@+id/tvNombre"
+                android:layout_width="60dp"
+                android:layout_height="75dp"
+                android:text="@string/textName" />
+
+            <EditText
+                android:id="@+id/etNombre"
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:hint="@string/tipName" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/liLaInput2"
+            android:layout_width="350dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:onClick="BtnInsertar"
+                android:background="@drawable/ic_add"
+                android:textSize="10dp"
+                android:layout_margin="20dp"
+                android:textStyle="bold"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:text="@string/btnAdd"/>
+
+            <Button
+                android:id="@+id/btnUpdate"
+                android:onClick="BtnActualizar"
+                android:textSize="8dp"
+                android:background="@drawable/ic_save"
+                android:textStyle="bold"
+                android:layout_margin="20dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:text="@string/btnUpdate"/>
+
+            <Button
+                android:id="@+id/btnDelete"
+                android:onClick="BtnBorrar"
+                android:textSize="10dp"
+                android:background="@drawable/ic_delete"
+                android:textStyle="bold"
+                android:layout_margin="20dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:text="@string/btnDelete"/>
+
+            <Button
+                android:id="@+id/btnList"
+                android:onClick="BtnListar"
+                android:textSize="10dp"
+                android:background="@drawable/ic_list"
+                android:textStyle="bold"
+                android:layout_margin="20dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:text="@string/btnList"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/liLaInput3"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/listViewSalida"
+                android:layout_margin="30dp"
+                android:textStyle="bold"
+                android:text="@string/back"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="350dp"
+            android:layout_height="100dp">
+
+            <Button
+                android:id="@+id/btnVolver2"
+                android:onClick="BtnVolver"
+                android:text="@string/back"
+                android:textSize="24sp"
+                android:gravity="center"
+                android:layout_width="175dp"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

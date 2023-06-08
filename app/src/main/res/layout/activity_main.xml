@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="350dp"
+        android:layout_height="650dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/menu"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/tvVoid4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/space"
+            android:textAlignment="center"
+            android:textSize="46sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnIntentVideo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_movie"
+                android:onClick="btnVideo" />
+
+            <Button
+                android:id="@+id/btnIntentBaseDatos"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_margin="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_crud"
+                android:onClick="btnBaseDatos" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvSaludo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/textfinal"
+            android:textSize="30dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
